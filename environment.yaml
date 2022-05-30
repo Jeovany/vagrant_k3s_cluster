@@ -1,0 +1,25 @@
+---
+- name: k3s-master
+  box: debian/buster64
+  hostname: k3s-master
+  ipaddress: 172.16.1.110
+  memory: 3584
+  cpus: 2
+  provision: provision/ansible/k3s-master.yaml
+
+- name: k3s-node1
+  box: debian/buster64
+  hostname: k3s-node1
+  ipaddress: 172.16.1.111
+  memory: 1536
+  cpus: 2
+  provision: provision/ansible/k3s-node1.yaml
+
+- name: k3s-node2
+  box: debian/buster64
+  hostname: k3s-node2
+  ipaddress: 172.16.1.112
+  memory: 1536
+  cpus: 2
+  provision: provision/ansible/k3s-node2.yaml
+
